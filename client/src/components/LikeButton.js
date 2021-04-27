@@ -36,7 +36,7 @@ function LikeButton({ user, post: { id, likeCount, likes } }) {
   );
 
   return (
-    <Button as="div" labelPosition="right" onClick={likePost}>
+    <Button as="div" labelPosition="right" onClick={user ? likePost : null}>
       <MyPopup content={liked ? 'Unlike' : 'Like'}>{likeButton}</MyPopup>
       <Label basic color="teal" pointing="left">
         {likeCount}
